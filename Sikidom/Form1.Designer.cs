@@ -270,6 +270,7 @@
             btnExport.TabIndex = 1;
             btnExport.Text = "CSV export ...";
             btnExport.UseVisualStyleBackColor = true;
+            btnExport.Click += btnExport_Click;
             // 
             // lBoxElozmenyek
             // 

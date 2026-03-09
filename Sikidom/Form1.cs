@@ -169,7 +169,8 @@ namespace Sikidom
             return (a + b > c) && (a + c > b) && (b + c > a);
         }
 
-        private void clearData() {
+        private void clearData()
+        {
             for (int i = 0; i < 3; i++)
             {
                 txtParam[i].Text = string.Empty;
@@ -181,7 +182,35 @@ namespace Sikidom
 
         private void btnTorles_Click(object sender, EventArgs e)
         {
-           clearData();
+            clearData();
+        }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            if (lBoxElozmenyek.Items.Count == 0)
+            {
+                lblStatus.Text = "Nincs mit exportálni!";
+                return;
+            }
+
+            using var sfd = new SaveFileDialog
+            {
+                Filter = "CSV fájl (*.csv)|*.csv",
+                Title = "Eredmények exportálása"
+            };
+
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                List<string> lines = new List<string>();
+                foreach (var item in lBoxElozmenyek.Items)
+                {
+                    lines.Add(item.ToString());
+                }
+                File.WriteAllLines(sfd.FileName, lines);           
+            }
+
+
+
         }
     }
 }
