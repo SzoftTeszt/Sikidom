@@ -117,7 +117,7 @@
             // 
             cBoxSikidom.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             cBoxSikidom.FormattingEnabled = true;
-            cBoxSikidom.Items.AddRange(new object[] { "Téglalap (a,b)", "Négyzet (a)", "Kör (r)", "Háromszög - 3 oldakl (a, b, c)", "Derékszögű háromszög - 2 befogó (a, b)" });
+            cBoxSikidom.Items.AddRange(new object[] { "Téglalap (a,b)", "Négyzet (a)", "Kör (r)", "Háromszög - 3 oldal (a, b, c)", "Derékszögű háromszög - 2 befogó (a, b)" });
             cBoxSikidom.Location = new Point(103, 33);
             cBoxSikidom.Name = "cBoxSikidom";
             cBoxSikidom.Size = new Size(263, 23);
@@ -163,6 +163,7 @@
             btnTorles.TabIndex = 2;
             btnTorles.Text = "Törlés";
             btnTorles.UseVisualStyleBackColor = true;
+            btnTorles.Click += btnTorles_Click;
             // 
             // btnSzamol
             // 
@@ -172,6 +173,7 @@
             btnSzamol.TabIndex = 2;
             btnSzamol.Text = "Számolás";
             btnSzamol.UseVisualStyleBackColor = true;
+            btnSzamol.Click += btnSzamol_Click;
             // 
             // lblStatus
             // 
