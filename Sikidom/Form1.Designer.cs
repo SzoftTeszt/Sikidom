@@ -286,6 +286,7 @@
             Controls.Add(tableLayoutPanel1);
             Name = "Form1";
             Text = "Síkidom terület - és területkalkulátor";
+            Load += Form1_Load;
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel2.ResumeLayout(false);
             gBoxBeallitas.ResumeLayout(false);
